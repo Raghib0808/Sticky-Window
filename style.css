@@ -1,0 +1,33 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    background-color: pink;
+}
+:root {
+  --accent-color: rgb(204, 0, 0);
+  --lightest-gray: rgb(244, 244, 244);
+  --light-gray: rgb(144, 144, 144);
+  --medium-gray: rgb(96, 96, 96);
+  --dark-gray: rgb(13, 13, 13);
+  --header-height: 40px;
+  --animation-duration: 200ms;
+  --animation-timing-curve: ease-in-out;
+}
+
+
+.sidebar{
+  flex-shrink: 0;
+  overflow: hidden;
+  width: 75px;
+  border-right: 1px solid var(--light-gray);
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - var(--header-height));
+  padding-top: 1rem;
+  align-items: center;
+  justify-content: stretch;
+  transition: width var(--animation-duration) var(--animation-timing-curve);
+  position: sticky;
+  left: 0;
+  top: 0;
+}
